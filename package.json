@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install":"npm install --prefix client",
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm start --prefix client\"",
+    "heroku-postbuild":"npm run install-client && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.15.3",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^5.10.17",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "npm-check-updates": "^11.3.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
